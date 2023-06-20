@@ -2,6 +2,7 @@
 import React from 'react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
+import useCart from './app/(store)/strore'
 
 export default function ProductCard(props) {
     const{product} = props
@@ -10,11 +11,21 @@ export default function ProductCard(props) {
 
     // link is important for seo 
 
+    // acess function 
+    const setProduct= useCart(state=>state.setProduct)
 
     const router= useRouter()
 
     function onProductClick()
     {
+        const newProduct={
+            name,
+            description,
+            price_id,
+            cost,
+            productInfo
+        }
+        setProduct({newProduct})
         router.push('/product?price_id='+ price_id)
     }
 
