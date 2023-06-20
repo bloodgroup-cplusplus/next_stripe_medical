@@ -17,7 +17,7 @@ export default function ProductPage(props)
 
         
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col p-4">
             <div className="grid grid-cols-1 md:grid-cols-2 w-full max-w-[1000px] mx-auto">
                 <div className="md:p-2 shadow ">
                     <img src={productInfo.images[0]} alt={name} className="w-full h-full object-cover"/>
@@ -27,7 +27,7 @@ export default function ProductPage(props)
                     <h3>{name}</h3>
                     <p className="md:text-base">Rs {cost/100}</p>
                     </div>
-                    <p className="text-sm">{description}</p>
+                    <p className="text-sm flex-1">{description}</p>
                     <button className="bg-slate-700 text-white hover:bg-slate-500 cursor-pointer ml-auto px-4 py-2">Add to Cart</button>
                 </div>
 
