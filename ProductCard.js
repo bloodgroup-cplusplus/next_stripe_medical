@@ -5,14 +5,17 @@ import { useRouter } from 'next/navigation'
 
 export default function ProductCard(props) {
     const{product} = props
-    const {id:pric_id, unit_amount:cost,product:productInfo} = product
+    const {id:price_id, unit_amount:cost,product:productInfo} = product
     const {name,description} = productInfo
 
     // link is important for seo 
 
+
+    const router= useRouter()
+
     function onProductClick()
     {
-        Router.push()
+        router.push()
     }
 
 
